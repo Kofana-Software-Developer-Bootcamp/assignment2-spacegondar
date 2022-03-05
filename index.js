@@ -4,11 +4,11 @@ const { requestCalculator, xmlToJson } = require("./helper");
 const path = require('path')
 const app = express();
 
-// Middleware kullanımı için dosya tnaımlanması
+// Middleware kullanımı için dosya isminin tanıtılması
 app.use(express.static('public'));
 
 
-// Middleware için Static dosyaların linklenmesi
+// Url üzerinden işlem parametrelerinin ayarlanması
 
 app.get('/', (req, res) => {
     res.status(200).send('INDEX SAYFASI')
@@ -42,24 +42,12 @@ app.get('*', (req, res) => {
     res.status(404).send('404 SAYFA BULUNAMADI')
 })
 
-// Url üzerinden işlem parametrelerinin ayarlanması
+// Middleware için Static dosyaların linklenmesi
 
-app.use('/add', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'public/add.html'))
 
-})
-app.use('/divide', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'public/divide.html'))
 
-})
-app.use('/multiply', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'public/multi.html'))
+// })
 
-})
-app.use('/subtract', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'public/sub.html'))
-
-})
 
 // Port seçimi ve konsol bildirimi
 const port = 3000;

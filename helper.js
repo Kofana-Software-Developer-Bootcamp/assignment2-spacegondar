@@ -1,7 +1,7 @@
 // Framework importlanması
 const axios = require("axios");
 
-// Postman code snipped kısmından alınan Api callun fonksiyona tanımlanması
+// Postman code snipped kısmından alınan Api callun parametreler ile fonksiyona tanımlanması
 const requestCalculator = async (op, intA, intB) => {
     var data = '<?xml version="1.0" encoding="utf-8"?>\n<soap12:Envelope xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">\n  <soap12:Body>\n    <'+op+' xmlns="http://tempuri.org/">\n      <intA>'+intA+'</intA>\n      <intB>'+intB+'</intB>\n    </'+op+'>\n  </soap12:Body>\n</soap12:Envelope>\n';
 
@@ -31,7 +31,7 @@ const requestCalculator = async (op, intA, intB) => {
     }
 
 
-// Xml şeklinde dönen cevabın parse edilmesi
+// Xml şeklinde dönen cevaptan sayının çekilmesi
 const xmlToJson = (xnl, op) => {
     return xnl.split('<'+op+'Result>').pop().split('</'+op+'Result>')[0];
 }

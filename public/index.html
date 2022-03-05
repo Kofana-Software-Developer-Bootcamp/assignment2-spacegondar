@@ -13,25 +13,25 @@
     <header id="headers">
         Dneonline Calculator Api
     </header>
-    
-    <div class="app" align="center">
+
+    <div class="app" id="app" align="center">
 
         <h3 class="result" align="center">Sonuç</h3>
 
         <article>
-            <!-- ZEYNEL teşekkürler -->
+            <!-- ZEYNEL'e Teşekkürler -->
             <section>
-                <input type="number" class="intInp" id="intA" placeholder="Sayı Giriniz" />
+                <input type="number" class="intInp" id="intA" placeholder="Sayı Giriniz" required/>
             </section>
 
             <section>
-                <input type="number" class="intInp" id="intB" placeholder="Sayı Giriniz" />
+                <input type="number" class="intInp" id="intB" placeholder="Sayı Giriniz" required/>
             </section>
 
-            <button class="btn-op">+</button>
-            <button class="btn-op">-</button>
-            <button class="btn-op">*</button>
-            <button class="btn-op">/</button>
+            <button type="submit" class="btn-op" onclick="appSubmit()">-</button>
+            <button type="submit" class="btn-op" onclick="appSubmit()">+</button>
+            <button type="submit" class="btn-op" onclick="appSubmit()">*</button>
+            <button type="submit" class="btn-op" onclick="appSubmit()">/</button>
 
         </article>
     </div>
