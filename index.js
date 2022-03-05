@@ -1,8 +1,9 @@
 // Fonksiyon ve Framework importlanması
 const express = require("express");
 const { requestCalculator, xmlToJson } = require("./helper");
-const path = require('path')
 const app = express();
+// const path = require('path') SOnrasında middleware kullanımı için
+
 
 // Middleware kullanımı için dosya isminin tanıtılması
 app.use(express.static('public'));

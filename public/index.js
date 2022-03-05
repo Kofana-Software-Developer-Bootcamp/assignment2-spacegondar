@@ -44,7 +44,7 @@ function appSubmit() {
                 .then((response) => response.json())
                 .then((data) => (resultHeader.textContent = data));
         };
-        
+
 
     }
 }
